@@ -1,0 +1,32 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #222; line-height: 1.4; }
+
+/* Top navigation */
+.top-nav { background: #1f2937; color: #fff; position: sticky; top: 0; z-index: 1000; }
+.nav-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; }
+.brand { font-weight: 700; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 0.5rem; align-items: center; }
+.nav-links a { color: #fff; text-decoration: none; padding: 0.45rem 0.7rem; border-radius: 4px; }
+.nav-links a:hover { background: rgba(255,255,255,0.06); }
+
+/* Responsive menu button */
+.menu-btn { display: none; background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.12); padding: 0.3rem 0.6rem; border-radius: 4px; cursor: pointer; }
+
+/* Header */
+header { background: #f3f4f6; padding: 3rem 1rem; text-align: center; }
+header h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+header p { color: #4b5563; }
+
+/* Main content */
+main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+/* Footer */
+footer { background: #111827; color: #d1d5db; text-align: center; padding: 1rem; }
+
+/* Small screens */
+@media (max-width: 640px) {
+    .nav-links { display: none; flex-direction: column; width: 100%; margin-top: 0.5rem; }
+    .nav-links.show { display: flex; background: #111827; position: absolute; left: 0; right: 0; top: 56px; padding: 0.5rem 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .nav-inner { position: relative; }
+    .menu-btn { display: inline-block; }
+}

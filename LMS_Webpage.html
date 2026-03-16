@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <div class="brand">My Website</div>
+            <div class="nav-links" id="navLinks">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Page Header</h1>
+        <p>Brief subheading or tagline goes here.</p>
+    </header>
+
+    <main>
+        <iframe 
+    src="web/SpaceShooter.html" 
+    width="960" 
+    height="600"
+    frameborder="0">
+</iframe>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> My Website — All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle and year injection
+        (function(){
+            var btn = document.getElementById('menuBtn');
+            var links = document.getElementById('navLinks');
+            if (btn && links) {
+                btn.addEventListener('click', function () {
+                    var isOpen = links.classList.toggle('show');
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            }
+            var y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>
